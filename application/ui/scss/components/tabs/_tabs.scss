@@ -1,0 +1,86 @@
+// *******************************************
+// *******************************************
+
+    // Tab container component
+
+// *******************************************
+// *******************************************
+
+// <div className='tabs'>
+//     <h1 className='tabs__title'>
+//         <span className='tabs__title__inner'>
+//             [Tab Title]
+//         </span>
+//     </h1>
+//     <div className='tabs__nav [tabs__nav--right]'>
+//         [Tab Navigation]
+//     </div>
+//     <div className='tabs__content [tabs__content--hidden]'>
+//         [Tab Content]
+//     </div>
+// </div>
+
+// container element
+.tabs {
+    position   : relative;
+    margin     : rem-calc(0 0 26);
+    background : $white;
+}
+
+// title element of tab container
+// 1. bottom margin same as baseline shift of child
+.tabs__title {
+    position    : relative;
+    margin      : rem-calc(0 0 2 0); // 1.
+    font-family : $sans--bold;
+    font-size   : rem-calc(21);
+    line-height : 1em;
+    color       : $gray--800;
+
+    // border line
+    &::after {
+        content    : '';
+        position   : absolute;
+        top        : 50%;
+        right      : 0;
+        left       : 0;
+        z-index    : $stack-bot;
+        height     : 1px;
+        background : $gray--200;
+    }
+
+}
+
+// offset title child element
+// 1. baseline shift
+.tabs__title__inner {
+    position   : relative;
+    top        : rem-calc(2); // 1.
+    z-index    : $stack-top;
+    margin     : rem-calc(0 10);
+    padding    : rem-calc(0 10);
+    display    : inline-block;
+    background : $white;
+}
+
+// navigation container
+.tabs__nav {
+    @extend .clearfix;
+    margin-top : rem-calc(-3);
+}
+
+// navigation on right side
+.tabs__nav--right {
+    margin-top : rem-calc(-9);
+
+    // push child element to right
+    > * {
+        float : right;
+    }
+
+}
+
+// hide tab content not selected
+.tabs__content--hidden {
+    display : none;
+}

@@ -1,0 +1,217 @@
+// *******************************************
+// *******************************************
+
+    // Form input components
+
+// *******************************************
+// *******************************************
+
+// @Vars
+// form vars
+$form-font                   : $sans      !default;
+$form-font-color             : $gray--500 !default;
+$form-focus-font-color       : $gray--700 !default;
+$form-placeholder-font-color : $gray--400 !default;
+
+// <div class="input-wrap">
+//  <input class="input" type="text" placeholder="Name" />
+// </div>
+
+// input container element
+.input-wrap {
+    position   : relative;
+    margin     : 0 0 rem-calc(24);
+    display    : block;
+
+    // let validation container handle bottom margin
+    // see _form-validation.scss
+    .validation--visible & {
+        margin-bottom : 0;
+    }
+
+}
+
+.input,
+.textarea {
+    position      : relative;
+    width         : 100%;
+    margin        : 0;
+    padding       : rem-calc(15);
+    display       : block;
+    font-family   : $form-font;
+    color         : $form-font-color;
+    border        : 1px solid $gray--300;
+    border-radius : 2px;
+    transition    : color 200ms ease,
+                    background 200ms ease,
+                    border-color 200ms ease;
+
+    -webkit-appearance : none;
+    -moz-appearance    : none;
+    z-index            : $stack-mid;
+
+    &:focus {
+        color        : $form-focus-font-color;
+        background   : $gray--050;
+        border-color : $gray--600;
+        outline      : none;
+        box-shadow   : 0px 0px 4px rgba($black, .25);
+    }
+
+}
+
+.input {
+    height : rem-calc(45);
+}
+
+.textarea {
+    max-width   : 100%;
+    height      : auto;
+    padding     : rem-calc(10);
+    line-height : 1.5;
+}
+
+// style input placeholder
+@include placeholder {
+    font-family : $form-font;
+    color       : $form-placeholder-font-color;
+    opacity     : 1;
+}
+
+.input:-ms-input-placeholder,
+.textarea:-ms-input-placeholder {
+    opacity : .5;
+}
+
+// hide ms validation x
+::-ms-clear {
+    display : none;
+}
+
+::-ms-reveal {
+    display : none;
+}
+
+// remove clear/reset button appearance on webkit
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance : none;
+}
+
+// select inputs
+// 1. container forms input border styles
+// 2. style container to resemble <select> el
+.input-wrap--select {
+    overflow      : hidden;
+    border        : 1px solid $gray--300; // 1.
+    border-radius : 2px; // 2.
+    background    : $gray--050; // 2.
+}
+
+// select element
+// 1. hide arrow on right by making input wider than container
+// 2. reset input styles
+// 3. disable select arrow appearance
+// 4. stack <select> above arrow to allow for click registration
+.input--select {
+    position      : relative;
+        z-index   : 2; // 4.
+    width         : 100%; // 1.
+    padding-right : rem-calc(30);
+    overflow      : hidden;
+    border        : none; // 2.
+    border-radius : 0px; // 2.
+    background    : transparent !important; // 4.
+
+    // 3.
+    webkit-appearance : none; // 3.
+    -moz-appearance   : none; // 3.
+    text-indent       : 1px; // 3.
+    text-overflow     : ''; // 3.
+
+    &::-ms-expand {
+        display : none; // 3.
+    }
+
+}
+
+// custom arrow icon element
+// 1. stack below <select> el allowing for click registration
+// 2. stack <select> above arrow to allow for click registration
+.input--select__arrow {
+    position    : absolute;
+        top     : 50%;
+        right   : rem-calc(15);
+        z-index : 1; // 2.
+    margin-top  : rem-calc(-7);
+
+    // icon element
+    .input--select__arrow-icon {
+        width  : rem-calc(9);
+        height : rem-calc(9);
+    }
+
+}
+
+// style container to resemble <select> el
+.input-wrap--select {
+    overflow : hidden;
+}
+
+// radio inputs
+.input-wrap--radio,
+.input-wrap--checkbox {
+
+    // label surrounding input element
+    > .label {
+        margin    : 0;
+        padding   : 0;
+        font-size : rem-calc(13);
+        color     : $gray--600 !important;
+    }
+
+}
+
+// input element
+.radio,
+.checkbox,
+.switch {
+    margin : rem-calc(0 9 0 0);
+}
+
+// radio group
+.radio-group,
+.checkbox-group {
+    margin : rem-calc(0 0 24 0);
+
+    // let validation container handle bottom margin
+    // see _form-validation.scss
+    .validation--visible & {
+        margin-bottom : 0;
+    }
+
+    > .input-wrap--radio,
+    > .input-wrap--checkbox {
+        margin  : 0;
+        padding : rem-calc(6 0);
+
+        &:first-of-type {
+            padding-top : 0;
+        }
+
+    }
+
+}
+
+.radio-group--inline,
+.checkbox-group--inline {
+
+    .input-wrap--radio,
+    .input-wrap--checkbox {
+        margin  : rem-calc(0 9);
+        display : inline-block;
+    }
+
+}

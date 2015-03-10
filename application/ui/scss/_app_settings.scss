@@ -1,0 +1,27 @@
+// *******************************************
+// *******************************************
+
+    // Application Settings
+
+// *******************************************
+// *******************************************
+
+$rem-base : 16px;
+
+// Font-size base
+$font-size-base : rem-calc(16);
+
+// Base line height
+$line-height-base : 1.5;
+
+// Grid
+$row-width     : rem-calc(1280);
+$column-gutter : rem-calc(20);
+$total-columns : 12;
+
+// Media Query Ranges
+$small-range   : (0, 30em)       ; // 0px to 480px
+$medium-range  : (30.063em, 48em); // 481px to 768px
+$large-range   : (48.063em, 64em); // 769px to 1024px
+$xlarge-range  : (64.063em, 90em); //1025px to 1440px
+$xxlarge-range : (90.063em)      ; //1441 px and up

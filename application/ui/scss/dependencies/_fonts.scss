@@ -1,0 +1,79 @@
+////////////////////////////////////////
+//                                    //
+//      Font-Family Definitions       //
+//                                    //
+////////////////////////////////////////
+
+// Source Sans Pro
+$source-light   : 'source_sans_prolight', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+$source-regular : 'source_sans_proregular', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+$source-bold    : 'source_sans_prosemibold', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+
+// Georgia
+$georgia-regular : Georgia, Times, 'Times New Roman', serif;
+
+
+///////////////////////////////
+//                           //
+//      Font Variables       //
+//                           //
+///////////////////////////////
+
+// Use these only when removing an element from it's flow
+$sans        : $source-regular;
+$sans--light : $source-light;
+$sans--bold  : $source-bold;
+
+$serif         : $georgia-regular;
+$serif--light  : $georgia-regular;
+$serif--bold   : $georgia-regular;
+
+
+// Use these variables to apply font-family to elements within flow
+$display-font        : $sans        !default;
+$display-font--light : $sans--light !default;
+$display-font--bold  : $sans--bold  !default;
+
+$body-font        : $sans        !default;
+$body-font--light : $sans--light !default;
+$body-font--bold  : $sans--bold  !default;
+
+
+// Use these variables to declare alternative font families if needed
+//$display-font-alt  : $sans--bold !default;
+//$body-font-alt     : $sans !default;
+
+
+//////////////////////////////////////
+//                                  //
+//      Font-Face Definitions       //
+//                                  //
+//////////////////////////////////////
+
+@font-face {
+    font-family : 'source_sans_prolight';
+    font-weight : normal;
+    font-style  : normal;
+    src         : local 'Source Sans Pro Light';
+    src         : url(../../media/fonts/SourceSansPro/sourcesanspro-light-webfont.woff2) format('woff2');
+    src         : url(../../media/fonts/SourceSansPro/sourcesanspro-light-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family : 'source_sans_proregular';
+    font-weight : normal;
+    font-style  : normal;
+    src         : local 'Source Sans Pro Regular';
+    src         : url(../../media/fonts/SourceSansPro/sourcesanspro-regular-webfont.woff2) format('woff2');
+    src         : url(../../media/fonts/SourceSansPro/sourcesanspro-regular-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family : 'source_sans_prosemibold';
+    font-weight : normal;
+    font-style  : normal;
+    src         : local 'Source Sans Pro Semibold';
+    src         : url(../../media/fonts/SourceSansPro/sourcesanspro-semibold-webfont.woff2) format('woff2');
+    src         : url(../../media/fonts/SourceSansPro/sourcesanspro-semibold-webfont.woff) format('woff');
+}
+
