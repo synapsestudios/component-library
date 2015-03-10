@@ -1,0 +1,15 @@
+// vendor imports
+    @import "../../../node_modules/synfrastructure/scss/global";
+    @import "../../../node_modules/synfrastructure/scss/synfrastructure";
+
+// dependency imports
+    @import "component-library/cl-colors";
+
+// layout imports
+    @import "component-library/cl-layout";
+
+// component imports
+    @import "component-library/components/cl-branding";
+    @import "component-library/components/cl-main-nav";
+    @import "component-library/components/cl-typography";
+    @import "component-library/components/cl-icons";

@@ -1,0 +1,7 @@
+bower_components
+build
+cache
+node_modules
+test
+npm-debug.log
+.vagrant

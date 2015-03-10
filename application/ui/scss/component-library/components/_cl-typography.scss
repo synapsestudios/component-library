@@ -8,7 +8,7 @@
 
 // headers
 
-.pl-h1 {
+.cl-h1 {
     margin      : rem-calc(0 0 25 0);
     font-weight : bold;
     font-size   : rem-calc(42);
@@ -17,7 +17,7 @@
     text-shadow : 1px 1px 1px rgba($white, .5);
 }
 
-.pl-h2 {
+.cl-h2 {
     margin      : rem-calc(0 0 25 0);
     font-weight : bold;
     font-size   : rem-calc(24);
@@ -25,7 +25,7 @@
     text-shadow : 1px 1px 1px rgba($white, .5);
 }
 
-.pl-hr {
+.cl-hr {
     margin        : rem-calc(30 0);
     border        : 0;
     border-bottom : 1px solid $gray--200;

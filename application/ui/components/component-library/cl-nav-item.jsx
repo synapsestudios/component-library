@@ -33,11 +33,11 @@ module.exports = React.createClass({
     {
         if (this.props.displayName) {
             this.getFlux().actions.route.navigate(
-                'pattern-library-section',
+                'component-library-section',
                 {section : this.props.displayName}
             );
         } else {
-            this.getFlux().actions.route.navigate('pattern-library');
+            this.getFlux().actions.route.navigate('component-library');
         }
     },
 
@@ -46,8 +46,8 @@ module.exports = React.createClass({
         var linkClasses, display;
 
         linkClasses = classSet({
-            'pl-nav__menu-link'             : true,
-            'pl-nav__menu-link--is-current' : this.props.active
+            'cl-nav__menu-link'             : true,
+            'cl-nav__menu-link--is-current' : this.props.active
         });
 
         if (this.props.children) {
@@ -58,7 +58,7 @@ module.exports = React.createClass({
             display = this.props.displayName;
         }
         return (
-            <li className='pl-nav__menu-item'>
+            <li className='cl-nav__menu-item'>
                 <a className={linkClasses} onClick={this.onClick}>
                     {display}
                 </a>

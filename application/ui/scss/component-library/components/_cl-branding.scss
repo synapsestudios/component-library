@@ -6,7 +6,7 @@
 // *******************************************
 // *******************************************
 
-.pl-branding {
+.cl-branding {
     height        : rem-calc(64);
     margin        : rem-calc(-30 -30 30 -30);
     padding       : rem-calc(8 0);
@@ -15,7 +15,7 @@
     border-bottom : 1px solid $gray--300;
 }
 
-.pl-branding__svg {
+.cl-branding__svg {
     max-width : rem-calc(120);
     fill      : $gray--400;
 }

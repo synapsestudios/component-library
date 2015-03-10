@@ -6,10 +6,10 @@
 // *******************************************
 // *******************************************
 
-// <nav className='pl-nav'>
-//     <menu className='pl-nav__menu'>
-//         <li className='pl-nav__menu-item'>
-//             <a className='pl-nav__menu-link [pl-nav__menu-link--is-current]'>
+// <nav className='cl-nav'>
+//     <menu className='cl-nav__menu'>
+//         <li className='cl-nav__menu-item'>
+//             <a className='cl-nav__menu-link [cl-nav__menu-link--is-current]'>
 //                 {'Buttons'}
 //             </a>
 //         </li>
@@ -17,17 +17,17 @@
 // </nav>
 
 // nav menu element
-.pl-nav__menu {
+.cl-nav__menu {
     list-style-type : none;
 }
 
 // nav menu top level item element
-.pl-nav__menu-item {
+.cl-nav__menu-item {
     margin : rem-calc(8 0);
 }
 
 // nav menu link item
-.pl-nav__menu-link {
+.cl-nav__menu-link {
     padding     : rem-calc(5 10);
     display     : block;
     font-size   : rem-calc(14);
@@ -43,6 +43,6 @@
 }
 
 // current state of navigation
-.pl-nav__menu-link--is-current {
+.cl-nav__menu-link--is-current {
     border-left-color : $cyan--100;
 }

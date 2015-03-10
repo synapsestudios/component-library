@@ -7,11 +7,11 @@ var Router   = require('react-router');
 var Route    = Router.Route;
 var Redirect = Router.Redirect;
 
-var SiteLayout         = require('./ui/site');
-var HomePage           = require('./ui/pages/home');
-var PatternLibraryPage = require('./ui/pages/pattern-library');
-var NotFoundPage       = require('./ui/pages/404');
-var FormattingPage     = require('./ui/pages/formatting');
+var SiteLayout           = require('./ui/site');
+var HomePage             = require('./ui/pages/home');
+var ComponentLibraryPage = require('./ui/pages/component-library');
+var NotFoundPage         = require('./ui/pages/404');
+var FormattingPage       = require('./ui/pages/formatting');
 
 var getEnvironmentDependentRoutes = function()
 {
@@ -20,8 +20,8 @@ var getEnvironmentDependentRoutes = function()
     if (__ENVIRONMENT__ !== 'production') {
         routes = routes.concat([
             <Route path='/formatting' name='formatting' handler={FormattingPage} key='formatting'/>,
-            <Route path='/pattern-library/:section' name='pattern-library-section' handler={PatternLibraryPage} key='pattern-library-section'/>,
-            <Redirect from='/pattern-library' name='pattern-library' key='pattern-library' to='/pattern-library/all' />
+            <Route path='/component-library/:section' name='component-library-section' handler={ComponentLibraryPage} key='component-library-section'/>,
+            <Redirect from='/component-library' name='component-library' key='component-library' to='/component-library/all' />
         ]);
     }
 
@@ -30,7 +30,7 @@ var getEnvironmentDependentRoutes = function()
 
 var routes = (
     <Route handler={SiteLayout}>
-        <Route path='/' name='home' handler={HomePage}/>
+        <Route path='/' name='home' handler={ComponentLibraryPage}/>
         {getEnvironmentDependentRoutes()}
         <Route path='*' name='404' handler={NotFoundPage}/>
     </Route>

@@ -6,11 +6,11 @@
 // *******************************************
 // *******************************************
 
-.pl-icons {
+.cl-icons {
     @include clearfix;
 }
 
-.pl-icon {
+.cl-icon {
     position   : relative;
     height     : rem-calc(100);
     margin     : 0;
@@ -28,7 +28,7 @@
 
 }
 
-.pl-icon__name {
+.cl-icon__name {
     position   : absolute;
     right      : 0;
     bottom     : 0;
