@@ -62,7 +62,7 @@
     "request"         : "2.53.0",
     "store"           : "1.3.16",
     "synapse-common"  : "1.0.0",
-    "synfrastructure" : "git://github.com/synapsestudios/synfrastructure.git#master",
+    "synfrastructure" : "1.0.0",
     "underscore"      : "1.6.0"
   }
 }
