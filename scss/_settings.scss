@@ -1,0 +1,22 @@
+// *******************************************
+// *******************************************
+
+    // Application Settings
+
+// *******************************************
+// *******************************************
+
+@import "synfrastructure/scss/foundation/functions";
+
+$rem-base : 16px;
+
+// Font-size base
+$font-size-base : rem-calc(16);
+
+// Base line height
+$line-height-base : 1.5;
+
+// Grid
+$row-width     : 100%;
+$column-gutter : rem-calc(20);
+$total-columns : 12;
