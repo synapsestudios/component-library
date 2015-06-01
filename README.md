@@ -6,7 +6,7 @@ The component library houses reusable React components and their styles. The lib
 New component repositories will be added to `packages.json`
 
 ### Current Components
-- [synapse-react-accordion (In Progress)](#)
+- [react-accordion](https://github.com/synapsestudios/react-accordion/)
 - [synapse-react-datepicker (In Progress)](#)
 - [synapse-react-autocomplete (In Progress)](#)
 - [synapse-react-input-masking (In Progress)](#)
